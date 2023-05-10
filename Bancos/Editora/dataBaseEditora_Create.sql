@@ -5,21 +5,21 @@
 #Create table Editora(id_editora int not null primary key auto_increment, nome Varchar(50));
 #Create table Genero(id_genero int not null primary key auto_increment, descricao varchar(255));
 #Create table Ranking(id_ranking int not null primary key auto_increment,data_inicial datetime,data_final datetime);
+/*
+Create table livr_autor(id_livro_autor int not null primary key auto_increment);
 
-# Create table livr_autor(id_livro_autor int not null primary key auto_increment);
+Create table Livro(id_livro int not null primary key auto_increment, titulo varchar(150), preco Decimal(3), autor_id int, editora_id int, Genero_id int,
+foreign key (Autor_id) references Autor(id_autor) on Delete no Action on update no action, 
+foreign key (editora_id) references Editora(id_editora) on Delete no Action on update no action, 
+foreign key (Genero_id) references Genero(id_genero) on Delete no Action on update no action
+);
 
-# Create table Livro(id_livro int not null primary key auto_increment, titulo varchar(150), preco Decimal(3), autor_id int, editora_id int, Genero_id int,
-# foreign key (Autor_id) references Autor(id_autor) on Delete no Action on update no action, 
-# foreign key (editora_id) references Editora(id_editora) on Delete no Action on update no action, 
-# foreign key (Genero_id) references Genero(id_genero) on Delete no Action on update no action
-# );
-
-# Create table Livro_Ranking(
-# qtd_sem int, posicao int not null, sem_consec int, pos_sem_ant int, idLivro int,idRanking int,
-# foreign key (idLivro) references Livro(id_livro) on Delete no Action on update no action, 
-# foreign key (idRanking) references Ranking(id_ranking) on Delete no Action on update no action
-# );
-
+Create table Livro_Ranking(
+qtd_sem int, posicao int not null, sem_consec int, pos_sem_ant int, idLivro int,idRanking int,
+foreign key (idLivro) references Livro(id_livro) on Delete no Action on update no action, 
+foreign key (idRanking) references Ranking(id_ranking) on Delete no Action on update no action
+);
+*/
 
 /*
 CREATE SCHEMA  editora_db;

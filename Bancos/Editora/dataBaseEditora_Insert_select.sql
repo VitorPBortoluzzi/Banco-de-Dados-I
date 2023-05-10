@@ -221,3 +221,10 @@ where ranking_semanal.idRanking = (select idRanking
 	ranking.idRanking = ranking_semanal.idRanking and
 	ranking_semanal.idLivro = livro_autor.idLivro and
 	livro_autor.idAutor = autor.idAutor;
+    
+    
+    
+use editora_db;
+
+select *
+from Ranking_Semanal where posicaoSemanaAnterior is null;
